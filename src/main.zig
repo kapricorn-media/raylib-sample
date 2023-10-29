@@ -25,7 +25,8 @@ pub fn main() void
             raylib.DrawText("Key pressed.", 10, 200, 20, raylib.BLACK);
         }
 
-        if (raygui.GuiButton(.{ .x = 10, .y = 100, .width = 200, .height = 50 }, "Button") != 0) {
+        const button = raygui.GuiButton(.{ .x = 10, .y = 100, .width = 200, .height = 50 }, "Button");
+        if (button != 0) {
             std.debug.print("pressed\n", .{});
         }
     }
