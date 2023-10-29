@@ -1,0 +1,44 @@
+{
+    "folders": [
+        {"path": "."},
+        {"path": "~/zig/zig-windows-x86_64-0.12.0-dev.1092+68ed78775"},
+        {"path": "~/zig/zig-macos-aarch64-0.12.0-dev.1092+68ed78775"},
+    ],
+    "build_systems": [
+        {
+            "name": "raylib-sample",
+            "working_dir": "$folder",
+            "shell_cmd": "zig-0.12.0-dev.1092 build",
+            "file_regex": "^\\s*([^\\n:]*):(\\d+):(\\d+): ([^\\n]+)",
+            "variants": [
+                {
+                    "name": "Build (ReleaseFast)",
+                    "shell_cmd": "zig-0.12.0-dev.1092 build -Doptimize=ReleaseFast",
+                },
+                {
+                    "name": "Run",
+                    "shell_cmd": "zig-0.12.0-dev.1092 build run",
+                },
+                {
+                    "name": "Run (ReleaseFast)",
+                    "shell_cmd": "zig-0.12.0-dev.1092 build -Doptimize=ReleaseFast run",
+                },
+                {
+                    "name": "Test",
+                    "shell_cmd": "zig-0.12.0-dev.1092 build test",
+                },
+                {
+                    "name": "Test (ReleaseFast)",
+                    "shell_cmd": "zig-0.12.0-dev.1092 build -Doptimize=ReleaseFast test",
+                },
+                {
+                    "name": "Clean",
+                    "shell_cmd": "rm -rf zig-cache zig-out",
+                    "windows": {
+                        "shell_cmd": "rmdir zig-cache zig-out /s /q"
+                    }
+                },
+            ],
+        }
+    ],
+}
