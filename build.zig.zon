@@ -4,8 +4,12 @@
     .paths = .{""},
     .dependencies = .{
         .raylib_zig = .{
-            .url = "https://github.com/kapricorn-media/raylib.zig/archive/7c882c229e8dc4fb6168e9a1cfed4ab1df31f40f.tar.gz",
-            .hash = "1220141e38f5d075c77a9d4fbd5c2b622ed1f0207ff2bdfc67af3488609e5067289b",
+            .url = "https://github.com/kapricorn-media/raylib.zig/archive/f7d7ca14a086b4866e0b37013da4d18ab2d4af59.tar.gz",
+            .hash = "12206c13730136f11e9811ed4a0d135eb66cbd0e20ca3e872016993b002d956ad55a",
+        },
+        .raygui_zig = .{
+            .url = "https://github.com/kapricorn-media/raygui.zig/archive/d4e8bb6b3e9637142a9a5a68a562e5129c35c5e3.tar.gz",
+            .hash = "1220bbeefea98b8152b24b38837db4b117696e83474a25fcaaa5fcca1f904c11b6ad",
         },
     },
 }

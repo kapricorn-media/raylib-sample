@@ -1,4 +1,7 @@
+const std = @import("std");
+
 const rl = @import("raylib");
+const rg = @import("raygui");
 
 const dep = @import("dep"); // example external dependency
 
@@ -17,5 +20,9 @@ pub fn main() void {
         rl.DrawFPS(10, dep.add(5, 5));
 
         rl.DrawText("hello world!", 100, 100, 20, rl.YELLOW);
+
+        if (rg.GuiButton(.{ .x = 100, .y = 200, .width = 200, .height = 100 }, "press me!") != 0) {
+            std.debug.print("pressed\n", .{});
+        }
     }
 }
