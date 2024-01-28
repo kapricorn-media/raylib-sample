@@ -1,0 +1,10 @@
+.{
+    .name = "raylib-sample",
+    .version = "0.1.0",
+    .paths = .{""},
+    .dependencies = .{
+        .raylib_zig = .{
+            .path = "../raylib.zig",
+        },
+    },
+}

@@ -1,0 +1,66 @@
+{
+    "folders": [
+        {"path": "."},
+        {
+            "path": "~/zig/0.12.0-dev.2063+804cee3b9/files",
+            "name": "zig",
+        },
+        {
+            "path": "../raylib.zig",
+            "name": "raylib.zig",
+        },
+        {
+            "path": "../raygui.zig",
+            "name": "raygui.zig",
+        },
+        {
+            "path": "../raylib",
+            "name": "raylib",
+        },
+    ],
+    "build_systems": [
+        {
+            "name": "raylib-sample",
+            "working_dir": "$folder",
+            "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build",
+            "file_regex": "^\\s*([^\\n:]*):(\\d+):(\\d+): ([^\\n]+)",
+            "variants": [
+                {
+                    "name": "Build (ReleaseFast)",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build -Doptimize=ReleaseFast",
+                },
+                {
+                    "name": "Run",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build run",
+                },
+                {
+                    "name": "Run (ReleaseFast)",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build -Doptimize=ReleaseFast run",
+                },
+                {
+                    "name": "Test",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build test",
+                },
+                {
+                    "name": "Test (ReleaseFast)",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build -Doptimize=ReleaseFast test",
+                },
+                {
+                    "name": "Package Client (ReleaseFast)",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build -Doptimize=ReleaseFast package_client",
+                },
+                {
+                    "name": "Package Server (ReleaseFast)",
+                    "shell_cmd": "zigup run 0.12.0-dev.2063+804cee3b9 build -Doptimize=ReleaseFast package_server",
+                },
+                {
+                    "name": "Clean",
+                    "shell_cmd": "rm -rf zig-cache zig-out",
+                    "windows": {
+                        "shell_cmd": "rmdir zig-cache zig-out /s /q"
+                    }
+                }
+            ],
+        }
+    ],
+}
