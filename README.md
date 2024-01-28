@@ -1,6 +1,6 @@
 # raylib-sample
 
-A minimal example on how to use the [raylib.zig](https://github.com/kapricorn-media/raylib.zig/tree/zig_package) library via the Zig package manager.
+A minimal example on how to use the [raylib.zig](https://github.com/kapricorn-media/raylib.zig/tree/zig_package) and [raygui.zig](https://github.com/kapricorn-media/raygui.zig/tree/zig_package) libraries via the Zig package manager.
 
 ## Build
 
